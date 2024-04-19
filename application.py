@@ -146,7 +146,7 @@ def application(environ, start_response):
             logger.warning('Error retrieving request body for async work.')
         response = ''
     else:
-        x = requests.get('http://10.0.59.3')
+        x = requests.get('http://10.0.61.66')
         welcome_render = welcome.replace("texttoreplace", x.text)
         response = welcome_render
     start_response("200 OK", [
